@@ -1,0 +1,7 @@
+orders_pkey|CREATE UNIQUE INDEX orders_pkey ON service.orders USING btree (id)
+idx_service_orders_user_created|CREATE INDEX idx_service_orders_user_created ON service.orders USING btree (user_id, created_at DESC, id DESC) INCLUDE (amount, status)
+idx_service_orders_paid_user_created|CREATE INDEX idx_service_orders_paid_user_created ON service.orders USING btree (user_id, created_at DESC, id DESC) INCLUDE (amount, status) WHERE ((status)::text = 'PAID'::text)
+
+orders_pkey|1
+idx_service_orders_user_created|1
+idx_service_orders_paid_user_created|2

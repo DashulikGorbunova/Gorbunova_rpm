@@ -1,0 +1,8 @@
+127.0.0.1 - - [01/Nov/2026 13:14:20] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 13:14:20] "GET /users/123/orders?status=PAID&days=30&limit=50 HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 13:14:20] "GET /users/999999999/orders HTTP/1.1" 200 -
+127.0.0.1 - - [01/Nov/2026 13:14:20] "GET /users/123/orders?limit=0 HTTP/1.1" 400 -
+127.0.0.1 - - [01/Nov/2026 13:14:20] "GET /users/123/orders?status=INVALID HTTP/1.1" 400 -
+127.0.0.1 - - [01/Nov/2026 13:14:20] "GET /missing HTTP/1.1" 404 -
+127.0.0.1 - - [01/Nov/2026 13:14:20] "GET /users/123/orders?days=abc HTTP/1.1" 400 -
+PASS: health, 50 filtered orders, deterministic ordering, empty result, 4 invalid requests

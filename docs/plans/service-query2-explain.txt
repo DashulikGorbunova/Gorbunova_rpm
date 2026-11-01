@@ -1,0 +1,4 @@
+Gather  (cost=1000.00..18100.70 rows=367 width=53)
+  Workers Planned: 2
+  ->  Parallel Seq Scan on orders  (cost=0.00..17064.00 rows=153 width=53)
+        Filter: ((user_id = 123) AND ((status)::text = 'PAID'::text))

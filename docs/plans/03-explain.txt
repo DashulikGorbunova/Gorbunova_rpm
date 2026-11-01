@@ -1,0 +1,4 @@
+Gather  (cost=1000.00..17036.43 rows=11 width=53)
+  Workers Planned: 2
+  ->  Parallel Seq Scan on orders  (cost=0.00..16035.33 rows=5 width=53)
+        Filter: (user_id = 123)

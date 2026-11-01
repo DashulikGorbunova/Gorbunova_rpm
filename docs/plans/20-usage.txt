@@ -1,0 +1,11 @@
+
+lab|orders|orders_pkey|0
+lab|users|users_pkey|0
+lab|users|idx_users_email|0
+lab|insert_indexed|ins_status|0
+lab|insert_indexed|ins_created|0
+lab|insert_plain|insert_plain_pkey|0
+lab|insert_indexed|insert_indexed_pkey|0
+lab|insert_indexed|ins_user|0
+lab|users|idx_users_lower_email|1
+lab|orders|idx_orders_paid_user_created|1

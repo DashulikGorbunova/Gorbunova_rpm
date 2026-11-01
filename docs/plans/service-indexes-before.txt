@@ -1,0 +1,1 @@
+orders_pkey|CREATE UNIQUE INDEX orders_pkey ON service.orders USING btree (id)

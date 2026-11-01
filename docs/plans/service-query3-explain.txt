@@ -1,0 +1,7 @@
+Limit  (cost=21189.10..21190.50 rows=12 width=29)
+  ->  Gather Merge  (cost=21189.10..21190.50 rows=12 width=29)
+        Workers Planned: 2
+        ->  Sort  (cost=20189.08..20189.09 rows=6 width=29)
+              Sort Key: created_at DESC, id DESC
+              ->  Parallel Seq Scan on orders  (cost=0.00..20189.00 rows=6 width=29)
+                    Filter: ((user_id = 123) AND ((status)::text = 'PAID'::text) AND (created_at >= (now() - '30 days'::interval)))
