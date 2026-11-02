@@ -1,0 +1,13 @@
+{
+  "duration_seconds": 99.82559204500012,
+  "steady_start_seconds": 50.0,
+  "steady_seconds": 49.82559204500012,
+  "steady_requests": 40,
+  "steady_rps": 0.8028002951550257,
+  "steady_mean_ms": 66041.57573395001,
+  "steady_p95_ms": 66394.16131300005,
+  "failures": 66,
+  "total_requests": 678,
+  "peak_spawned_users": 500,
+  "configured_users": 500
+}

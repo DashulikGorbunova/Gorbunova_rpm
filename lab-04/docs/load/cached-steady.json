@@ -1,0 +1,19 @@
+{
+  "full_rps": 85.25757025215181,
+  "full_mean_ms": 3819.962087838907,
+  "full_p95_ms": 8200,
+  "full_requests": 7784,
+  "full_failures": 0,
+  "steady_end_seconds": 85.0,
+  "duration_seconds": 91.30042509899977,
+  "steady_start_seconds": 50.0,
+  "steady_seconds": 35.0,
+  "steady_requests": 3445,
+  "steady_rps": 98.42857142857143,
+  "steady_mean_ms": 4444.364424723367,
+  "steady_p95_ms": 5209.018130999993,
+  "failures": 0,
+  "total_requests": 7784,
+  "peak_spawned_users": 500,
+  "configured_users": 500
+}

@@ -1,0 +1,99 @@
+{
+  "method": {
+    "users": 500,
+    "spawn_rate": 10,
+    "run_seconds": 85,
+    "steady_after_seconds": 50,
+    "wait_time_seconds": [
+      0.1,
+      0.5
+    ],
+    "menu_rows": 10000,
+    "returned_limit": 100,
+    "auth": "same valid student Bearer token; all session/user checks enabled",
+    "workers": 1,
+    "order": [
+      "baseline",
+      "cached"
+    ]
+  },
+  "phases": {
+    "baseline": {
+      "requests": 5639,
+      "failures": 0,
+      "rps": 62.85073000680143,
+      "mean_ms": 5328.610918772286,
+      "p95_ms": 14000,
+      "host_load_average_1m_before": 5.4208984375,
+      "host_load_average_1m_mean": 5.891749692766854,
+      "host_load_average_1m_after": 6.6201171875,
+      "postgres": {
+        "select_calls": 26700,
+        "menu_select_calls": 5639,
+        "menu_exec_ms": 37362.16045799976,
+        "menu_rows": 563900
+      },
+      "steady": {
+        "full_rps": 62.85073000680143,
+        "full_mean_ms": 5328.610918772286,
+        "full_p95_ms": 14000,
+        "full_requests": 5639,
+        "full_failures": 0,
+        "steady_end_seconds": 85.0,
+        "duration_seconds": 89.721201027,
+        "steady_start_seconds": 50.0,
+        "steady_seconds": 35.0,
+        "steady_requests": 2188,
+        "steady_rps": 62.51428571428571,
+        "steady_mean_ms": 8039.679660365629,
+        "steady_p95_ms": 14376.164462999895,
+        "failures": 0,
+        "total_requests": 5639,
+        "peak_spawned_users": 500,
+        "configured_users": 500
+      }
+    },
+    "cached": {
+      "requests": 7784,
+      "failures": 0,
+      "rps": 85.25757025215181,
+      "mean_ms": 3819.962087838907,
+      "p95_ms": 8200,
+      "host_load_average_1m_before": 6.6201171875,
+      "host_load_average_1m_mean": 6.521521526834239,
+      "host_load_average_1m_after": 6.47509765625,
+      "postgres": {
+        "select_calls": 21533,
+        "menu_select_calls": 1,
+        "menu_exec_ms": 29.372027999997954,
+        "menu_rows": 100
+      },
+      "steady": {
+        "full_rps": 85.25757025215181,
+        "full_mean_ms": 3819.962087838907,
+        "full_p95_ms": 8200,
+        "full_requests": 7784,
+        "full_failures": 0,
+        "steady_end_seconds": 85.0,
+        "duration_seconds": 91.30042509899977,
+        "steady_start_seconds": 50.0,
+        "steady_seconds": 35.0,
+        "steady_requests": 3445,
+        "steady_rps": 98.42857142857143,
+        "steady_mean_ms": 4444.364424723367,
+        "steady_p95_ms": 5209.018130999993,
+        "failures": 0,
+        "total_requests": 7784,
+        "peak_spawned_users": 500,
+        "configured_users": 500
+      }
+    }
+  },
+  "environment": {
+    "postgres": "PostgreSQL 17.11 (Debian 17.11-1.pgdg12+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14+deb12u1) 12.2.0, 64-bit",
+    "cpu_count": 5,
+    "postgres_menu_rows": 10000,
+    "date": "2026-11-02",
+    "database": "sirius_bench"
+  }
+}
