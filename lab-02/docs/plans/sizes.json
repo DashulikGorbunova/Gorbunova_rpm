@@ -1,0 +1,216 @@
+{
+  "events": {
+    "10000": {
+      "before": {
+        "heap": 688128,
+        "total": 966656,
+        "indexes": 245760
+      },
+      "after": {
+        "heap": 688128,
+        "total": 1794048,
+        "indexes": 1073152
+      },
+      "indexes": [
+        {
+          "indexrelname": "events_pkey",
+          "bytes": 245760
+        },
+        {
+          "indexrelname": "idx_events_created_at",
+          "bytes": 245760
+        },
+        {
+          "indexrelname": "idx_events_user_created",
+          "bytes": 335872
+        },
+        {
+          "indexrelname": "idx_events_user_id",
+          "bytes": 245760
+        }
+      ]
+    },
+    "100000": {
+      "before": {
+        "heap": 6832128,
+        "total": 9125888,
+        "indexes": 2260992
+      },
+      "after": {
+        "heap": 6832128,
+        "total": 16826368,
+        "indexes": 9961472
+      },
+      "indexes": [
+        {
+          "indexrelname": "events_pkey",
+          "bytes": 2260992
+        },
+        {
+          "indexrelname": "idx_events_created_at",
+          "bytes": 2260992
+        },
+        {
+          "indexrelname": "idx_events_user_created",
+          "bytes": 3178496
+        },
+        {
+          "indexrelname": "idx_events_user_id",
+          "bytes": 2260992
+        }
+      ]
+    },
+    "1000000": {
+      "before": {
+        "heap": 68272128,
+        "total": 90808320,
+        "indexes": 22487040
+      },
+      "after": {
+        "heap": 68272128,
+        "total": 154345472,
+        "indexes": 86016000
+      },
+      "indexes": [
+        {
+          "indexrelname": "events_pkey",
+          "bytes": 22487040
+        },
+        {
+          "indexrelname": "idx_events_created_at",
+          "bytes": 22487040
+        },
+        {
+          "indexrelname": "idx_events_user_created",
+          "bytes": 31563776
+        },
+        {
+          "indexrelname": "idx_events_user_id",
+          "bytes": 9478144
+        }
+      ]
+    },
+    "5000000": {
+      "before": {
+        "heap": 341336064,
+        "total": 453779456,
+        "indexes": 112328704
+      },
+      "after": {
+        "heap": 341336064,
+        "total": 759619584,
+        "indexes": 418160640
+      },
+      "indexes": [
+        {
+          "indexrelname": "events_pkey",
+          "bytes": 112328704
+        },
+        {
+          "indexrelname": "idx_events_created_at",
+          "bytes": 112336896
+        },
+        {
+          "indexrelname": "idx_events_user_created",
+          "bytes": 157728768
+        },
+        {
+          "indexrelname": "idx_events_user_id",
+          "bytes": 35766272
+        }
+      ]
+    }
+  },
+  "orders": {
+    "100000": {
+      "before": {
+        "heap": 8708096,
+        "total": 10993664,
+        "indexes": 2260992
+      },
+      "after": {
+        "heap": 8708096,
+        "total": 24788992,
+        "indexes": 16048128
+      },
+      "indexes": [
+        {
+          "indexrelname": "idx_orders_created_cover",
+          "bytes": 5251072
+        },
+        {
+          "indexrelname": "idx_service_orders_paid_user_created",
+          "bytes": 2375680
+        },
+        {
+          "indexrelname": "idx_service_orders_user_created",
+          "bytes": 6160384
+        },
+        {
+          "indexrelname": "orders_pkey",
+          "bytes": 2260992
+        }
+      ]
+    },
+    "1000000": {
+      "before": {
+        "heap": 87048192,
+        "total": 109576192,
+        "indexes": 22487040
+      },
+      "after": {
+        "heap": 87048192,
+        "total": 246816768,
+        "indexes": 159719424
+      },
+      "indexes": [
+        {
+          "indexrelname": "idx_orders_created_cover",
+          "bytes": 52256768
+        },
+        {
+          "indexrelname": "idx_service_orders_paid_user_created",
+          "bytes": 23552000
+        },
+        {
+          "indexrelname": "idx_service_orders_user_created",
+          "bytes": 61423616
+        },
+        {
+          "indexrelname": "orders_pkey",
+          "bytes": 22487040
+        }
+      ]
+    },
+    "5000000": {
+      "before": {
+        "heap": 435224576,
+        "total": 547684352,
+        "indexes": 112328704
+      },
+      "after": {
+        "heap": 435224576,
+        "total": 1233362944,
+        "indexes": 797990912
+      },
+      "indexes": [
+        {
+          "indexrelname": "idx_orders_created_cover",
+          "bytes": 261193728
+        },
+        {
+          "indexrelname": "idx_service_orders_paid_user_created",
+          "bytes": 117628928
+        },
+        {
+          "indexrelname": "idx_service_orders_user_created",
+          "bytes": 306839552
+        },
+        {
+          "indexrelname": "orders_pkey",
+          "bytes": 112328704
+        }
+      ]
+    }
+  }
+}

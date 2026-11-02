@@ -1,0 +1,5 @@
+2026-11-02: fresh rpm-lab01-check container
+lab-01/scripts/migrate.py: applied 001 and 002; repeat run skipped both.
+Inserted 60 test orders into isolated service.orders.
+lab-01/scripts/smoke.py: PASS health, 50 filtered orders, deterministic ordering, empty result, 4 invalid requests.
+Python compileall and bash -n: PASS.

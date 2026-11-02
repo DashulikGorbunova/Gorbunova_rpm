@@ -1,0 +1,1 @@
+PASS: 71 measurements, 3 runs each; plan files match; Sort absent at 10k; all actual sort plans retained; service queries nonempty; date index used.

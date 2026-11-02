@@ -1,0 +1,195 @@
+{
+  "sql": "SELECT * FROM events WHERE created_at >= NOW()-INTERVAL '365 days'",
+  "runs": [
+    {
+      "Plan": {
+        "Node Type": "Seq Scan",
+        "Parallel Aware": false,
+        "Async Capable": false,
+        "Relation Name": "events",
+        "Alias": "events",
+        "Startup Cost": 0.0,
+        "Total Cost": 129166.72,
+        "Plan Rows": 4999484,
+        "Plan Width": 36,
+        "Actual Startup Time": 9.082,
+        "Actual Total Time": 1852.02,
+        "Actual Rows": 4999989,
+        "Actual Loops": 1,
+        "Filter": "(created_at >= (now() - '365 days'::interval))",
+        "Rows Removed by Filter": 11,
+        "Shared Hit Blocks": 12852,
+        "Shared Read Blocks": 28815,
+        "Shared Dirtied Blocks": 0,
+        "Shared Written Blocks": 0,
+        "Local Hit Blocks": 0,
+        "Local Read Blocks": 0,
+        "Local Dirtied Blocks": 0,
+        "Local Written Blocks": 0,
+        "Temp Read Blocks": 0,
+        "Temp Written Blocks": 0
+      },
+      "Planning": {
+        "Shared Hit Blocks": 74,
+        "Shared Read Blocks": 0,
+        "Shared Dirtied Blocks": 0,
+        "Shared Written Blocks": 0,
+        "Local Hit Blocks": 0,
+        "Local Read Blocks": 0,
+        "Local Dirtied Blocks": 0,
+        "Local Written Blocks": 0,
+        "Temp Read Blocks": 0,
+        "Temp Written Blocks": 0
+      },
+      "Planning Time": 0.301,
+      "Triggers": [],
+      "JIT": {
+        "Functions": 2,
+        "Options": {
+          "Inlining": false,
+          "Optimization": false,
+          "Expressions": true,
+          "Deforming": true
+        },
+        "Timing": {
+          "Generation": {
+            "Deform": 0.078,
+            "Total": 1.526
+          },
+          "Inlining": 0.0,
+          "Optimization": 1.019,
+          "Emission": 7.998,
+          "Total": 10.543
+        }
+      },
+      "Execution Time": 2204.872
+    },
+    {
+      "Plan": {
+        "Node Type": "Seq Scan",
+        "Parallel Aware": false,
+        "Async Capable": false,
+        "Relation Name": "events",
+        "Alias": "events",
+        "Startup Cost": 0.0,
+        "Total Cost": 129166.72,
+        "Plan Rows": 4999484,
+        "Plan Width": 36,
+        "Actual Startup Time": 4.616,
+        "Actual Total Time": 1584.498,
+        "Actual Rows": 4999987,
+        "Actual Loops": 1,
+        "Filter": "(created_at >= (now() - '365 days'::interval))",
+        "Rows Removed by Filter": 13,
+        "Shared Hit Blocks": 12884,
+        "Shared Read Blocks": 28783,
+        "Shared Dirtied Blocks": 0,
+        "Shared Written Blocks": 0,
+        "Local Hit Blocks": 0,
+        "Local Read Blocks": 0,
+        "Local Dirtied Blocks": 0,
+        "Local Written Blocks": 0,
+        "Temp Read Blocks": 0,
+        "Temp Written Blocks": 0
+      },
+      "Planning": {
+        "Shared Hit Blocks": 74,
+        "Shared Read Blocks": 0,
+        "Shared Dirtied Blocks": 0,
+        "Shared Written Blocks": 0,
+        "Local Hit Blocks": 0,
+        "Local Read Blocks": 0,
+        "Local Dirtied Blocks": 0,
+        "Local Written Blocks": 0,
+        "Temp Read Blocks": 0,
+        "Temp Written Blocks": 0
+      },
+      "Planning Time": 0.308,
+      "Triggers": [],
+      "JIT": {
+        "Functions": 2,
+        "Options": {
+          "Inlining": false,
+          "Optimization": false,
+          "Expressions": true,
+          "Deforming": true
+        },
+        "Timing": {
+          "Generation": {
+            "Deform": 0.066,
+            "Total": 0.164
+          },
+          "Inlining": 0.0,
+          "Optimization": 0.225,
+          "Emission": 4.336,
+          "Total": 4.725
+        }
+      },
+      "Execution Time": 1902.277
+    },
+    {
+      "Plan": {
+        "Node Type": "Seq Scan",
+        "Parallel Aware": false,
+        "Async Capable": false,
+        "Relation Name": "events",
+        "Alias": "events",
+        "Startup Cost": 0.0,
+        "Total Cost": 129166.72,
+        "Plan Rows": 4999484,
+        "Plan Width": 36,
+        "Actual Startup Time": 5.324,
+        "Actual Total Time": 1657.35,
+        "Actual Rows": 4999987,
+        "Actual Loops": 1,
+        "Filter": "(created_at >= (now() - '365 days'::interval))",
+        "Rows Removed by Filter": 13,
+        "Shared Hit Blocks": 12916,
+        "Shared Read Blocks": 28751,
+        "Shared Dirtied Blocks": 0,
+        "Shared Written Blocks": 0,
+        "Local Hit Blocks": 0,
+        "Local Read Blocks": 0,
+        "Local Dirtied Blocks": 0,
+        "Local Written Blocks": 0,
+        "Temp Read Blocks": 0,
+        "Temp Written Blocks": 0
+      },
+      "Planning": {
+        "Shared Hit Blocks": 74,
+        "Shared Read Blocks": 0,
+        "Shared Dirtied Blocks": 0,
+        "Shared Written Blocks": 0,
+        "Local Hit Blocks": 0,
+        "Local Read Blocks": 0,
+        "Local Dirtied Blocks": 0,
+        "Local Written Blocks": 0,
+        "Temp Read Blocks": 0,
+        "Temp Written Blocks": 0
+      },
+      "Planning Time": 0.367,
+      "Triggers": [],
+      "JIT": {
+        "Functions": 2,
+        "Options": {
+          "Inlining": false,
+          "Optimization": false,
+          "Expressions": true,
+          "Deforming": true
+        },
+        "Timing": {
+          "Generation": {
+            "Deform": 0.068,
+            "Total": 0.267
+          },
+          "Inlining": 0.0,
+          "Optimization": 0.458,
+          "Emission": 4.779,
+          "Total": 5.504
+        }
+      },
+      "Execution Time": 1969.063
+    }
+  ],
+  "median_ms": 1969.063
+}

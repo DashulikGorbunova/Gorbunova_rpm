@@ -1,0 +1,285 @@
+{
+  "sql": "SELECT id,amount,status,created_at FROM orders WHERE created_at>=NOW()-INTERVAL '30 days' AND created_at<NOW()",
+  "runs": [
+    {
+      "Plan": {
+        "Node Type": "Gather",
+        "Parallel Aware": false,
+        "Async Capable": false,
+        "Startup Cost": 1000.0,
+        "Total Cost": 140915.71,
+        "Plan Rows": 399005,
+        "Plan Width": 28,
+        "Actual Startup Time": 7.603,
+        "Actual Total Time": 797.874,
+        "Actual Rows": 410932,
+        "Actual Loops": 1,
+        "Workers Planned": 2,
+        "Workers Launched": 2,
+        "Single Copy": false,
+        "Shared Hit Blocks": 13204,
+        "Shared Read Blocks": 39924,
+        "Shared Dirtied Blocks": 0,
+        "Shared Written Blocks": 0,
+        "Local Hit Blocks": 0,
+        "Local Read Blocks": 0,
+        "Local Dirtied Blocks": 0,
+        "Local Written Blocks": 0,
+        "Temp Read Blocks": 0,
+        "Temp Written Blocks": 0,
+        "Plans": [
+          {
+            "Node Type": "Seq Scan",
+            "Parent Relationship": "Outer",
+            "Parallel Aware": true,
+            "Async Capable": false,
+            "Relation Name": "orders",
+            "Alias": "orders",
+            "Startup Cost": 0.0,
+            "Total Cost": 100015.21,
+            "Plan Rows": 166252,
+            "Plan Width": 28,
+            "Actual Startup Time": 8.076,
+            "Actual Total Time": 735.581,
+            "Actual Rows": 136977,
+            "Actual Loops": 3,
+            "Filter": "((created_at < now()) AND (created_at >= (now() - '30 days'::interval)))",
+            "Rows Removed by Filter": 1529689,
+            "Shared Hit Blocks": 13204,
+            "Shared Read Blocks": 39924,
+            "Shared Dirtied Blocks": 0,
+            "Shared Written Blocks": 0,
+            "Local Hit Blocks": 0,
+            "Local Read Blocks": 0,
+            "Local Dirtied Blocks": 0,
+            "Local Written Blocks": 0,
+            "Temp Read Blocks": 0,
+            "Temp Written Blocks": 0,
+            "Workers": []
+          }
+        ]
+      },
+      "Planning": {
+        "Shared Hit Blocks": 74,
+        "Shared Read Blocks": 0,
+        "Shared Dirtied Blocks": 0,
+        "Shared Written Blocks": 0,
+        "Local Hit Blocks": 0,
+        "Local Read Blocks": 0,
+        "Local Dirtied Blocks": 0,
+        "Local Written Blocks": 0,
+        "Temp Read Blocks": 0,
+        "Temp Written Blocks": 0
+      },
+      "Planning Time": 0.451,
+      "Triggers": [],
+      "JIT": {
+        "Functions": 12,
+        "Options": {
+          "Inlining": false,
+          "Optimization": false,
+          "Expressions": true,
+          "Deforming": true
+        },
+        "Timing": {
+          "Generation": {
+            "Deform": 0.621,
+            "Total": 1.438
+          },
+          "Inlining": 0.0,
+          "Optimization": 0.895,
+          "Emission": 23.048,
+          "Total": 25.381
+        }
+      },
+      "Execution Time": 857.413
+    },
+    {
+      "Plan": {
+        "Node Type": "Gather",
+        "Parallel Aware": false,
+        "Async Capable": false,
+        "Startup Cost": 1000.0,
+        "Total Cost": 140915.71,
+        "Plan Rows": 399005,
+        "Plan Width": 28,
+        "Actual Startup Time": 8.001,
+        "Actual Total Time": 766.699,
+        "Actual Rows": 410932,
+        "Actual Loops": 1,
+        "Workers Planned": 2,
+        "Workers Launched": 2,
+        "Single Copy": false,
+        "Shared Hit Blocks": 13300,
+        "Shared Read Blocks": 39828,
+        "Shared Dirtied Blocks": 0,
+        "Shared Written Blocks": 0,
+        "Local Hit Blocks": 0,
+        "Local Read Blocks": 0,
+        "Local Dirtied Blocks": 0,
+        "Local Written Blocks": 0,
+        "Temp Read Blocks": 0,
+        "Temp Written Blocks": 0,
+        "Plans": [
+          {
+            "Node Type": "Seq Scan",
+            "Parent Relationship": "Outer",
+            "Parallel Aware": true,
+            "Async Capable": false,
+            "Relation Name": "orders",
+            "Alias": "orders",
+            "Startup Cost": 0.0,
+            "Total Cost": 100015.21,
+            "Plan Rows": 166252,
+            "Plan Width": 28,
+            "Actual Startup Time": 6.2,
+            "Actual Total Time": 709.482,
+            "Actual Rows": 136977,
+            "Actual Loops": 3,
+            "Filter": "((created_at < now()) AND (created_at >= (now() - '30 days'::interval)))",
+            "Rows Removed by Filter": 1529689,
+            "Shared Hit Blocks": 13300,
+            "Shared Read Blocks": 39828,
+            "Shared Dirtied Blocks": 0,
+            "Shared Written Blocks": 0,
+            "Local Hit Blocks": 0,
+            "Local Read Blocks": 0,
+            "Local Dirtied Blocks": 0,
+            "Local Written Blocks": 0,
+            "Temp Read Blocks": 0,
+            "Temp Written Blocks": 0,
+            "Workers": []
+          }
+        ]
+      },
+      "Planning": {
+        "Shared Hit Blocks": 74,
+        "Shared Read Blocks": 0,
+        "Shared Dirtied Blocks": 0,
+        "Shared Written Blocks": 0,
+        "Local Hit Blocks": 0,
+        "Local Read Blocks": 0,
+        "Local Dirtied Blocks": 0,
+        "Local Written Blocks": 0,
+        "Temp Read Blocks": 0,
+        "Temp Written Blocks": 0
+      },
+      "Planning Time": 0.405,
+      "Triggers": [],
+      "JIT": {
+        "Functions": 12,
+        "Options": {
+          "Inlining": false,
+          "Optimization": false,
+          "Expressions": true,
+          "Deforming": true
+        },
+        "Timing": {
+          "Generation": {
+            "Deform": 1.143,
+            "Total": 2.014
+          },
+          "Inlining": 0.0,
+          "Optimization": 0.711,
+          "Emission": 17.126,
+          "Total": 19.851
+        }
+      },
+      "Execution Time": 819.837
+    },
+    {
+      "Plan": {
+        "Node Type": "Gather",
+        "Parallel Aware": false,
+        "Async Capable": false,
+        "Startup Cost": 1000.0,
+        "Total Cost": 140915.71,
+        "Plan Rows": 399005,
+        "Plan Width": 28,
+        "Actual Startup Time": 5.228,
+        "Actual Total Time": 735.661,
+        "Actual Rows": 410932,
+        "Actual Loops": 1,
+        "Workers Planned": 2,
+        "Workers Launched": 2,
+        "Single Copy": false,
+        "Shared Hit Blocks": 13396,
+        "Shared Read Blocks": 39732,
+        "Shared Dirtied Blocks": 0,
+        "Shared Written Blocks": 0,
+        "Local Hit Blocks": 0,
+        "Local Read Blocks": 0,
+        "Local Dirtied Blocks": 0,
+        "Local Written Blocks": 0,
+        "Temp Read Blocks": 0,
+        "Temp Written Blocks": 0,
+        "Plans": [
+          {
+            "Node Type": "Seq Scan",
+            "Parent Relationship": "Outer",
+            "Parallel Aware": true,
+            "Async Capable": false,
+            "Relation Name": "orders",
+            "Alias": "orders",
+            "Startup Cost": 0.0,
+            "Total Cost": 100015.21,
+            "Plan Rows": 166252,
+            "Plan Width": 28,
+            "Actual Startup Time": 5.134,
+            "Actual Total Time": 681.364,
+            "Actual Rows": 136977,
+            "Actual Loops": 3,
+            "Filter": "((created_at < now()) AND (created_at >= (now() - '30 days'::interval)))",
+            "Rows Removed by Filter": 1529689,
+            "Shared Hit Blocks": 13396,
+            "Shared Read Blocks": 39732,
+            "Shared Dirtied Blocks": 0,
+            "Shared Written Blocks": 0,
+            "Local Hit Blocks": 0,
+            "Local Read Blocks": 0,
+            "Local Dirtied Blocks": 0,
+            "Local Written Blocks": 0,
+            "Temp Read Blocks": 0,
+            "Temp Written Blocks": 0,
+            "Workers": []
+          }
+        ]
+      },
+      "Planning": {
+        "Shared Hit Blocks": 74,
+        "Shared Read Blocks": 0,
+        "Shared Dirtied Blocks": 0,
+        "Shared Written Blocks": 0,
+        "Local Hit Blocks": 0,
+        "Local Read Blocks": 0,
+        "Local Dirtied Blocks": 0,
+        "Local Written Blocks": 0,
+        "Temp Read Blocks": 0,
+        "Temp Written Blocks": 0
+      },
+      "Planning Time": 0.543,
+      "Triggers": [],
+      "JIT": {
+        "Functions": 12,
+        "Options": {
+          "Inlining": false,
+          "Optimization": false,
+          "Expressions": true,
+          "Deforming": true
+        },
+        "Timing": {
+          "Generation": {
+            "Deform": 0.374,
+            "Total": 1.459
+          },
+          "Inlining": 0.0,
+          "Optimization": 1.208,
+          "Emission": 13.622,
+          "Total": 16.289
+        }
+      },
+      "Execution Time": 784.661
+    }
+  ],
+  "median_ms": 819.837
+}
