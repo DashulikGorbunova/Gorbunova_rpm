@@ -1,0 +1,19 @@
+[I 261102 16:51:13 command:177] Visit me at http://127.0.0.1:15555
+[I 261102 16:51:13 command:186] Broker: redis://127.0.0.1:16382/11
+[I 261102 16:51:13 command:187] Registered tasks:
+    ['celery.accumulate',
+     'celery.backend_cleanup',
+     'celery.chain',
+     'celery.chord',
+     'celery.chord_unlock',
+     'celery.chunks',
+     'celery.group',
+     'celery.map',
+     'celery.starmap',
+     'sirius.cleanup_task_logs',
+     'sirius.dispatch_outbox',
+     'sirius.generate_order_pdf',
+     'sirius.send_order_email',
+     'sirius.send_order_sms']
+[I 261102 16:51:13 mixins:228] Connected to redis://127.0.0.1:16382/11
+[I 261102 16:53:02 command:26] 15 detected, shutting down

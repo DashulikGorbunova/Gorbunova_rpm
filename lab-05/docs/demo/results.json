@@ -1,0 +1,207 @@
+{
+  "quick": false,
+  "eager": false,
+  "durations": {
+    "sync": {
+      "samples_ms": [
+        4586.70804600024,
+        4039.321629999904,
+        4040.3016609998303
+      ],
+      "median_ms": 4040.3016609998303
+    },
+    "celery": {
+      "samples_ms": [
+        134.42318899979,
+        45.576138999422255,
+        36.12773599979846
+      ],
+      "median_ms": 45.576138999422255
+    }
+  },
+  "checks": {
+    "real_retries_attempts": 4,
+    "real_dlq_message": true,
+    "duplicate_skipped": true,
+    "flower_authenticated_api": true,
+    "real_beat_cleanup": true,
+    "broker_outage_order_preserved_and_recovered": true,
+    "worker_child_killed_during_pdf": true,
+    "worker_restart_and_effects_once": true
+  },
+  "simulated_delays_seconds": {
+    "pdf": 2.0,
+    "email": 1.0,
+    "sms": 1.0
+  },
+  "jobs": [
+    {
+      "order_id": 1,
+      "kind": "email",
+      "status": "SUCCEEDED",
+      "attempts": 1
+    },
+    {
+      "order_id": 1,
+      "kind": "pdf",
+      "status": "SUCCEEDED",
+      "attempts": 1
+    },
+    {
+      "order_id": 1,
+      "kind": "sms",
+      "status": "SUCCEEDED",
+      "attempts": 1
+    },
+    {
+      "order_id": 2,
+      "kind": "email",
+      "status": "SUCCEEDED",
+      "attempts": 1
+    },
+    {
+      "order_id": 2,
+      "kind": "pdf",
+      "status": "SUCCEEDED",
+      "attempts": 1
+    },
+    {
+      "order_id": 2,
+      "kind": "sms",
+      "status": "SUCCEEDED",
+      "attempts": 1
+    },
+    {
+      "order_id": 3,
+      "kind": "email",
+      "status": "SUCCEEDED",
+      "attempts": 1
+    },
+    {
+      "order_id": 3,
+      "kind": "pdf",
+      "status": "SUCCEEDED",
+      "attempts": 1
+    },
+    {
+      "order_id": 3,
+      "kind": "sms",
+      "status": "SUCCEEDED",
+      "attempts": 1
+    },
+    {
+      "order_id": 4,
+      "kind": "email",
+      "status": "SUCCEEDED",
+      "attempts": 1
+    },
+    {
+      "order_id": 4,
+      "kind": "pdf",
+      "status": "SUCCEEDED",
+      "attempts": 1
+    },
+    {
+      "order_id": 4,
+      "kind": "sms",
+      "status": "SUCCEEDED",
+      "attempts": 1
+    },
+    {
+      "order_id": 5,
+      "kind": "email",
+      "status": "DEAD",
+      "attempts": 4
+    },
+    {
+      "order_id": 5,
+      "kind": "pdf",
+      "status": "SUCCEEDED",
+      "attempts": 1
+    },
+    {
+      "order_id": 5,
+      "kind": "sms",
+      "status": "SUCCEEDED",
+      "attempts": 1
+    },
+    {
+      "order_id": 6,
+      "kind": "email",
+      "status": "SUCCEEDED",
+      "attempts": 1
+    },
+    {
+      "order_id": 6,
+      "kind": "pdf",
+      "status": "SUCCEEDED",
+      "attempts": 1
+    },
+    {
+      "order_id": 6,
+      "kind": "sms",
+      "status": "SUCCEEDED",
+      "attempts": 1
+    },
+    {
+      "order_id": 7,
+      "kind": "email",
+      "status": "SUCCEEDED",
+      "attempts": 1
+    },
+    {
+      "order_id": 7,
+      "kind": "pdf",
+      "status": "SUCCEEDED",
+      "attempts": 1
+    },
+    {
+      "order_id": 7,
+      "kind": "sms",
+      "status": "SUCCEEDED",
+      "attempts": 1
+    },
+    {
+      "order_id": 8,
+      "kind": "email",
+      "status": "SUCCEEDED",
+      "attempts": 1
+    },
+    {
+      "order_id": 8,
+      "kind": "pdf",
+      "status": "SUCCEEDED",
+      "attempts": 1
+    },
+    {
+      "order_id": 8,
+      "kind": "sms",
+      "status": "SUCCEEDED",
+      "attempts": 1
+    }
+  ],
+  "effects": 23,
+  "maintenance_runs": 1,
+  "failure_attempt_logs": [
+    {
+      "attempt": 1,
+      "outcome": "RETRYING",
+      "created_at": "2026-11-02T16:51:33.240779+00:00"
+    },
+    {
+      "attempt": 2,
+      "outcome": "RETRYING",
+      "created_at": "2026-11-02T16:51:36.337488+00:00"
+    },
+    {
+      "attempt": 3,
+      "outcome": "RETRYING",
+      "created_at": "2026-11-02T16:51:39.354616+00:00"
+    },
+    {
+      "attempt": 4,
+      "outcome": "DEAD",
+      "created_at": "2026-11-02T16:51:44.367870+00:00"
+    }
+  ]
+}

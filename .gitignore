@@ -3,3 +3,6 @@ __pycache__/
 .env
 .pytest_cache/
 *.pyc
+runtime/
+celerybeat-schedule*
+lab-05/docs/ci/

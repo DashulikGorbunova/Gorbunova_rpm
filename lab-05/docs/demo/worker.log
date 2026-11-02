@@ -1,0 +1,88 @@
+
+ -------------- sirius05-demo@614dbee39264 v5.6.3 (recovery)
+--- ***** -----
+-- ******* ---- Linux-6.18.57-x86_64-with-glibc2.41 2026-11-02 16:51:10
+- *** --- * ---
+- ** ---------- [config]
+- ** ---------- .> app:         sirius_food:0x7f48defb1e50
+- ** ---------- .> transport:   redis://127.0.0.1:16382/11
+- ** ---------- .> results:     redis://127.0.0.1:16382/12
+- *** --- * --- .> concurrency: 2 (prefork)
+-- ******* ---- .> task events: ON
+--- ***** -----
+ -------------- [queues]
+                .> default          exchange=default(direct) key=default
+
+
+[tasks]
+  . sirius.cleanup_task_logs
+  . sirius.dispatch_outbox
+  . sirius.generate_order_pdf
+  . sirius.send_order_email
+  . sirius.send_order_sms
+
+[2026-11-02 16:51:10,617: INFO/MainProcess] Connected to redis://127.0.0.1:16382/11
+[2026-11-02 16:51:10,625: INFO/MainProcess] mingle: searching for neighbors
+[2026-11-02 16:51:11,639: INFO/MainProcess] mingle: all alone
+[2026-11-02 16:51:11,655: INFO/MainProcess] sirius05-demo@614dbee39264 ready.
+[2026-11-02 16:51:31,062: INFO/MainProcess] Task sirius.send_order_email[69429f36-6c57-4185-b6c5-04188f808d83] received
+[2026-11-02 16:51:31,070: INFO/MainProcess] Task sirius.generate_order_pdf[965bcba8-7fce-46e1-9a2b-331b2ced4ad6] received
+[2026-11-02 16:51:32,203: INFO/ForkPoolWorker-2] Task sirius.send_order_email[69429f36-6c57-4185-b6c5-04188f808d83] succeeded in 1.1384108980000747s: {'status': 'succeeded', 'job_id': '69429f36-6c57-4185-b6c5-04188f808d83', 'attempts': 1}
+[2026-11-02 16:51:32,207: INFO/MainProcess] Task sirius.send_order_sms[b85295a1-5a27-413c-a028-c7a536d6d303] received
+[2026-11-02 16:51:33,216: INFO/ForkPoolWorker-1] Task sirius.generate_order_pdf[965bcba8-7fce-46e1-9a2b-331b2ced4ad6] succeeded in 2.1436572639995575s: {'status': 'succeeded', 'job_id': '965bcba8-7fce-46e1-9a2b-331b2ced4ad6', 'attempts': 1}
+[2026-11-02 16:51:33,220: INFO/MainProcess] Task sirius.send_order_sms[0b086854-686b-46c3-b62d-45870c882ec1] received
+[2026-11-02 16:51:33,228: INFO/ForkPoolWorker-2] Task sirius.send_order_sms[b85295a1-5a27-413c-a028-c7a536d6d303] succeeded in 1.0197996409997359s: {'status': 'succeeded', 'job_id': 'b85295a1-5a27-413c-a028-c7a536d6d303', 'attempts': 1}
+[2026-11-02 16:51:33,232: INFO/MainProcess] Task sirius.send_order_email[8d1d6105-b319-449a-a637-aadc2f693595] received
+[2026-11-02 16:51:34,242: INFO/ForkPoolWorker-1] Task sirius.send_order_sms[0b086854-686b-46c3-b62d-45870c882ec1] succeeded in 1.0191223029996763s: {'status': 'succeeded', 'job_id': '0b086854-686b-46c3-b62d-45870c882ec1', 'attempts': 1}
+[2026-11-02 16:51:34,247: INFO/MainProcess] Task sirius.generate_order_pdf[c7814641-47c8-48bf-a4cd-ed37d0a9adcd] received
+[2026-11-02 16:51:34,273: INFO/ForkPoolWorker-2] Task sirius.send_order_email[8d1d6105-b319-449a-a637-aadc2f693595] retry: Retry in 1.0s: RuntimeError('Simulated provider temporarily unavailable')
+[2026-11-02 16:51:34,282: INFO/MainProcess] Task sirius.send_order_email[27a62076-dbdd-4279-8546-6bbc1a6de7a7] received
+[2026-11-02 16:51:35,297: INFO/ForkPoolWorker-2] Task sirius.send_order_email[27a62076-dbdd-4279-8546-6bbc1a6de7a7] succeeded in 1.0131761239999832s: {'status': 'succeeded', 'job_id': '27a62076-dbdd-4279-8546-6bbc1a6de7a7', 'attempts': 1}
+[2026-11-02 16:51:35,300: INFO/MainProcess] Task sirius.send_order_sms[d3ef3dd5-cc6d-4be4-89cc-ce8239c73984] received
+[2026-11-02 16:51:36,282: INFO/ForkPoolWorker-1] Task sirius.generate_order_pdf[c7814641-47c8-48bf-a4cd-ed37d0a9adcd] succeeded in 2.0326003719992514s: {'status': 'succeeded', 'job_id': 'c7814641-47c8-48bf-a4cd-ed37d0a9adcd', 'attempts': 1}
+[2026-11-02 16:51:36,288: INFO/MainProcess] Task sirius.generate_order_pdf[da4203da-9eaa-4a32-b66c-cce771c3322d] received
+[2026-11-02 16:51:36,314: INFO/ForkPoolWorker-2] Task sirius.send_order_sms[d3ef3dd5-cc6d-4be4-89cc-ce8239c73984] succeeded in 1.0114901100005227s: {'status': 'succeeded', 'job_id': 'd3ef3dd5-cc6d-4be4-89cc-ce8239c73984', 'attempts': 1}
+[2026-11-02 16:51:36,322: INFO/MainProcess] Task sirius.send_order_email[8d1d6105-b319-449a-a637-aadc2f693595] received
+[2026-11-02 16:51:37,350: INFO/ForkPoolWorker-2] Task sirius.send_order_email[8d1d6105-b319-449a-a637-aadc2f693595] retry: Retry in 2.0s: RuntimeError('Simulated provider temporarily unavailable')
+[2026-11-02 16:51:37,355: INFO/MainProcess] Task sirius.send_order_email[8d1d6105-b319-449a-a637-aadc2f693595] received
+[2026-11-02 16:51:38,309: INFO/ForkPoolWorker-1] Task sirius.generate_order_pdf[da4203da-9eaa-4a32-b66c-cce771c3322d] succeeded in 2.015762368000651s: {'status': 'succeeded', 'job_id': 'da4203da-9eaa-4a32-b66c-cce771c3322d', 'attempts': 1}
+[2026-11-02 16:51:40,362: INFO/MainProcess] Task sirius.send_order_email[8d1d6105-b319-449a-a637-aadc2f693595] received
+[2026-11-02 16:51:40,365: INFO/ForkPoolWorker-2] Task sirius.send_order_email[8d1d6105-b319-449a-a637-aadc2f693595] retry: Retry in 4.0s: RuntimeError('Simulated provider temporarily unavailable')
+[2026-11-02 16:51:42,230: INFO/MainProcess] Task sirius.dispatch_outbox[19b53015-feba-44d1-b260-aa98ac651e87] received
+[2026-11-02 16:51:42,246: INFO/ForkPoolWorker-2] Task sirius.dispatch_outbox[19b53015-feba-44d1-b260-aa98ac651e87] succeeded in 0.014634066999860806s: {'published': 0}
+[2026-11-02 16:51:45,414: ERROR/ForkPoolWorker-2] Task sirius.send_order_email[8d1d6105-b319-449a-a637-aadc2f693595] raised unexpected: RuntimeError('Retries exhausted; job retained in DLQ')
+Traceback (most recent call last):
+  File "/workspace/Gorbunova_rpm/lab-05/.venv/lib/python3.12/site-packages/celery/app/trace.py", line 585, in trace_task
+    R = retval = fun(*args, **kwargs)
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/Gorbunova_rpm/lab-05/.venv/lib/python3.12/site-packages/celery/app/trace.py", line 858, in __protected_call__
+    return self.run(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/Gorbunova_rpm/lab-05/app/tasks/orders.py", line 30, in send_order_email
+    return perform(self,job_id,'email')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/Gorbunova_rpm/lab-05/app/tasks/orders.py", line 20, in perform
+    raise RuntimeError('Retries exhausted; job retained in DLQ') from None
+RuntimeError: Retries exhausted; job retained in DLQ
+[2026-11-02 16:51:45,534: INFO/MainProcess] Task sirius.generate_order_pdf[50026f4f-93e0-451b-b161-29273ca1a484] received
+[2026-11-02 16:51:45,564: INFO/ForkPoolWorker-2] Task sirius.generate_order_pdf[50026f4f-93e0-451b-b161-29273ca1a484] succeeded in 0.013892449999730161s: {'status': 'skipped', 'job_id': '965bcba8-7fce-46e1-9a2b-331b2ced4ad6', 'state': 'SUCCEEDED'}
+[2026-11-02 16:51:52,222: INFO/MainProcess] Task sirius.dispatch_outbox[0e027db7-4034-4a8d-b4c0-9f967cb616cf] received
+[2026-11-02 16:51:52,240: INFO/ForkPoolWorker-2] Task sirius.dispatch_outbox[0e027db7-4034-4a8d-b4c0-9f967cb616cf] succeeded in 0.01606969600015873s: {'published': 0}
+[2026-11-02 16:52:02,226: INFO/MainProcess] Task sirius.dispatch_outbox[20bde0ac-0f5f-4b0e-a7bb-62376abfebd0] received
+[2026-11-02 16:52:02,248: INFO/ForkPoolWorker-2] Task sirius.dispatch_outbox[20bde0ac-0f5f-4b0e-a7bb-62376abfebd0] succeeded in 0.01789970799927687s: {'published': 0}
+[2026-11-02 16:52:12,290: INFO/MainProcess] Task sirius.dispatch_outbox[4112fd81-d4eb-4829-ba14-68ba6e6cd0a2] received
+[2026-11-02 16:52:12,306: INFO/ForkPoolWorker-2] Task sirius.dispatch_outbox[4112fd81-d4eb-4829-ba14-68ba6e6cd0a2] succeeded in 0.012065223000718106s: {'published': 0}
+[2026-11-02 16:52:22,223: INFO/MainProcess] Task sirius.dispatch_outbox[762c9be1-8d84-4ce5-bcc7-c4de8ea96d5b] received
+[2026-11-02 16:52:22,274: INFO/ForkPoolWorker-2] Task sirius.dispatch_outbox[762c9be1-8d84-4ce5-bcc7-c4de8ea96d5b] succeeded in 0.047466516999520536s: {'published': 0}
+[2026-11-02 16:52:32,223: INFO/MainProcess] Task sirius.cleanup_task_logs[be3c47c9-e8f7-40dc-ae61-0c0257e9de7d] received
+[2026-11-02 16:52:32,226: INFO/MainProcess] Task sirius.dispatch_outbox[190d290d-c567-4f1a-bc3d-24ee19e8373b] received
+[2026-11-02 16:52:32,237: INFO/ForkPoolWorker-2] Task sirius.cleanup_task_logs[be3c47c9-e8f7-40dc-ae61-0c0257e9de7d] succeeded in 0.012737856000057945s: {'deleted_logs': 0}
+[2026-11-02 16:52:32,246: INFO/ForkPoolWorker-1] Task sirius.dispatch_outbox[190d290d-c567-4f1a-bc3d-24ee19e8373b] succeeded in 0.017923901999893133s: {'published': 0}
+[2026-11-02 16:52:36,914: INFO/MainProcess] Task sirius.send_order_email[213214cd-a601-4819-96c6-e1e12cad9359] received
+[2026-11-02 16:52:36,917: INFO/MainProcess] Task sirius.generate_order_pdf[51b76f10-3163-4791-b14d-2d32952abfe2] received
+[2026-11-02 16:52:37,941: INFO/ForkPoolWorker-2] Task sirius.send_order_email[213214cd-a601-4819-96c6-e1e12cad9359] succeeded in 1.0259269950001908s: {'status': 'succeeded', 'job_id': '213214cd-a601-4819-96c6-e1e12cad9359', 'attempts': 1}
+[2026-11-02 16:52:37,951: INFO/MainProcess] Task sirius.send_order_sms[bbb5026c-46c2-488f-b9ba-bc255ffbe0c7] received
+[2026-11-02 16:52:38,947: INFO/ForkPoolWorker-1] Task sirius.generate_order_pdf[51b76f10-3163-4791-b14d-2d32952abfe2] succeeded in 2.026983845000359s: {'status': 'succeeded', 'job_id': '51b76f10-3163-4791-b14d-2d32952abfe2', 'attempts': 1}
+[2026-11-02 16:52:38,978: INFO/ForkPoolWorker-2] Task sirius.send_order_sms[bbb5026c-46c2-488f-b9ba-bc255ffbe0c7] succeeded in 1.023415573999955s: {'status': 'succeeded', 'job_id': 'bbb5026c-46c2-488f-b9ba-bc255ffbe0c7', 'attempts': 1}
+
+worker: Warm shutdown (MainProcess)

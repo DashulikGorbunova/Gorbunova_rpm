@@ -1,0 +1,48 @@
+
+ -------------- sirius05-demo@614dbee39264 v5.6.3 (recovery)
+--- ***** -----
+-- ******* ---- Linux-6.18.57-x86_64-with-glibc2.41 2026-11-02 16:52:48
+- *** --- * ---
+- ** ---------- [config]
+- ** ---------- .> app:         sirius_food:0x7f50014a28a0
+- ** ---------- .> transport:   redis://127.0.0.1:16382/11
+- ** ---------- .> results:     redis://127.0.0.1:16382/12
+- *** --- * --- .> concurrency: 2 (prefork)
+-- ******* ---- .> task events: ON
+--- ***** -----
+ -------------- [queues]
+                .> default          exchange=default(direct) key=default
+
+
+[tasks]
+  . sirius.cleanup_task_logs
+  . sirius.dispatch_outbox
+  . sirius.generate_order_pdf
+  . sirius.send_order_email
+  . sirius.send_order_sms
+
+[2026-11-02 16:52:49,012: INFO/MainProcess] Connected to redis://127.0.0.1:16382/11
+[2026-11-02 16:52:49,016: INFO/MainProcess] mingle: searching for neighbors
+[2026-11-02 16:52:50,028: INFO/MainProcess] mingle: all alone
+[2026-11-02 16:52:50,047: INFO/MainProcess] sirius05-demo@614dbee39264 ready.
+[2026-11-02 16:52:50,053: INFO/MainProcess] Task sirius.generate_order_pdf[83ef25e0-a274-480d-8498-fe7cf5d7b1e5] received
+[2026-11-02 16:52:50,056: INFO/MainProcess] Task sirius.send_order_sms[8c0261ec-8ab4-4abe-b153-05f0f0af532b] received
+[2026-11-02 16:52:51,039: ERROR/MainProcess] Process 'ForkPoolWorker-2' pid:174358 exited with 'signal 9 (SIGKILL)'
+[2026-11-02 16:52:51,050: ERROR/MainProcess] Task handler raised error: WorkerLostError('Worker exited prematurely: signal 9 (SIGKILL) Job: 0.')
+Traceback (most recent call last):
+  File "/workspace/Gorbunova_rpm/lab-05/.venv/lib/python3.12/site-packages/billiard/pool.py", line 1367, in mark_as_worker_lost
+    raise WorkerLostError(
+billiard.einfo.ExceptionWithTraceback:
+"""
+Traceback (most recent call last):
+  File "/workspace/Gorbunova_rpm/lab-05/.venv/lib/python3.12/site-packages/billiard/pool.py", line 1367, in mark_as_worker_lost
+    raise WorkerLostError(
+billiard.exceptions.WorkerLostError: Worker exited prematurely: signal 9 (SIGKILL) Job: 0.
+"""
+[2026-11-02 16:52:51,123: INFO/MainProcess] Task sirius.send_order_email[97975326-ce52-4299-9617-18ce265d7d15] received
+[2026-11-02 16:52:51,178: INFO/ForkPoolWorker-1] Task sirius.send_order_sms[8c0261ec-8ab4-4abe-b153-05f0f0af532b] succeeded in 1.120541164000315s: {'status': 'succeeded', 'job_id': '8c0261ec-8ab4-4abe-b153-05f0f0af532b', 'attempts': 1}
+[2026-11-02 16:52:51,184: INFO/MainProcess] Task sirius.generate_order_pdf[83ef25e0-a274-480d-8498-fe7cf5d7b1e5] received
+[2026-11-02 16:52:52,297: INFO/ForkPoolWorker-3] Task sirius.send_order_email[97975326-ce52-4299-9617-18ce265d7d15] succeeded in 1.1438561100003426s: {'status': 'succeeded', 'job_id': '97975326-ce52-4299-9617-18ce265d7d15', 'attempts': 1}
+[2026-11-02 16:52:53,204: INFO/ForkPoolWorker-1] Task sirius.generate_order_pdf[83ef25e0-a274-480d-8498-fe7cf5d7b1e5] succeeded in 2.01843557400025s: {'status': 'succeeded', 'job_id': '83ef25e0-a274-480d-8498-fe7cf5d7b1e5', 'attempts': 1}
+
+worker: Warm shutdown (MainProcess)

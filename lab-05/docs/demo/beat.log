@@ -1,0 +1,18 @@
+[2026-11-02 16:51:32,207: INFO/MainProcess] beat: Starting...
+[2026-11-02 16:51:42,221: INFO/MainProcess] Scheduler: Sending due task recover-pending-outbox (sirius.dispatch_outbox)
+[2026-11-02 16:51:52,218: INFO/MainProcess] Scheduler: Sending due task recover-pending-outbox (sirius.dispatch_outbox)
+[2026-11-02 16:52:02,218: INFO/MainProcess] Scheduler: Sending due task recover-pending-outbox (sirius.dispatch_outbox)
+[2026-11-02 16:52:12,218: INFO/MainProcess] Scheduler: Sending due task recover-pending-outbox (sirius.dispatch_outbox)
+[2026-11-02 16:52:22,218: INFO/MainProcess] Scheduler: Sending due task recover-pending-outbox (sirius.dispatch_outbox)
+[2026-11-02 16:52:32,218: INFO/MainProcess] Scheduler: Sending due task cleanup-old-task-logs (sirius.cleanup_task_logs)
+[2026-11-02 16:52:32,222: INFO/MainProcess] Scheduler: Sending due task recover-pending-outbox (sirius.dispatch_outbox)
+celery beat v5.6.3 (recovery) is starting.
+__    -    ... __   -        _
+LocalTime -> 2026-11-02 16:51:32
+Configuration ->
+    . broker -> redis://127.0.0.1:16382/11
+    . loader -> celery.loaders.app.AppLoader
+    . scheduler -> celery.beat.PersistentScheduler
+    . db -> /workspace/Gorbunova_rpm/lab-05/docs/demo/beat-schedule
+    . logfile -> [stderr]@%INFO
+    . maxinterval -> 5.00 minutes (300s)
