@@ -1,0 +1,3 @@
+Delivery gRPC Server running on loopback port 19051
+INFO:delivery_service.server:GetDelivery
+INFO:delivery_service.server:GetDelivery

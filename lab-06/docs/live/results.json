@@ -1,0 +1,32 @@
+{
+  "checks": {
+    "http_assign_get_via_grpc": true,
+    "grpc_enforces_jwt_and_ownership": true,
+    "real_server_stream": true,
+    "two_real_bidi_chat_clients": true,
+    "real_deadline_exceeded": true,
+    "stopped_service_http_503": true,
+    "monolith_other_modules_remain_available": true,
+    "reconnect_and_delivery_persisted": true
+  },
+  "tracking": [
+    "ASSIGNED",
+    "ON_THE_WAY",
+    "DELIVERED"
+  ],
+  "chat": [
+    {
+      "sender_id": 1,
+      "text": "Where are you?"
+    },
+    {
+      "sender_id": 3,
+      "text": "At the entrance"
+    }
+  ],
+  "transport": "real TCP gRPC / HTTP in separate OS processes",
+  "process_ids": {
+    "monolith": 1934395,
+    "delivery": 1935052
+  }
+}

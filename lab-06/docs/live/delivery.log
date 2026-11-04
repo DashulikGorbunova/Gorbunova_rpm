@@ -1,0 +1,8 @@
+Delivery gRPC Server running on loopback port 19051
+INFO:delivery_service.server:AssignCourier order=1
+INFO:delivery_service.server:GetDelivery
+INFO:delivery_service.server:GetDelivery
+INFO:delivery_service.server:GetDelivery
+INFO:delivery_service.server:AdvanceDelivery delivery=1
+INFO:delivery_service.server:CompleteDelivery delivery=1
+INFO:delivery_service.server:AssignCourier order=2
