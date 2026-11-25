@@ -8,5 +8,6 @@
 - [Практическая №6 — delivery как gRPC-микросервис](lab-06/README.md).
 - [Практическая №7 — RabbitMQ, Saga, DLQ и Transactional Outbox](lab07/README.md).
 - [Практическая №8 — SSR-витрина Next.js](lab08/README.md).
+- [Практическая №9 — Observability](lab09/README.md).
 
 Работы запускаются из своих каталогов и используют отдельные учебные контейнеры PostgreSQL.
