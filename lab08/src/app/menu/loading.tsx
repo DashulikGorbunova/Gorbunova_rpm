@@ -1,0 +1,1 @@
+export default function Loading(){return <main aria-busy="true" className="mx-auto max-w-5xl px-6 py-10"><p role="status">Загружаем меню…</p><div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">{Array.from({length:6},(_,i)=><div key={i} className="h-40 animate-pulse rounded-2xl bg-stone-200"/>)}</div></main>}

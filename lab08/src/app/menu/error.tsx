@@ -1,0 +1,4 @@
+'use client';
+import {useRouter} from 'next/navigation';
+import {startTransition} from 'react';
+export default function ErrorPage({reset}:{error:Error;reset:()=>void}){const router=useRouter();return <main className="mx-auto max-w-3xl px-6 py-16"><section role="alert" className="rounded-2xl border border-red-200 bg-red-50 p-8"><h1 className="text-2xl font-bold text-red-800">Не удалось загрузить меню</h1><p className="mt-3">Проверьте, что REST API запущен, и повторите попытку.</p><button onClick={()=>startTransition(()=>{router.refresh();reset();})} className="mt-6 rounded-xl bg-red-800 px-5 py-3 text-white">Попробовать снова</button></section></main>}

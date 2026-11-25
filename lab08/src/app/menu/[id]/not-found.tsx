@@ -1,0 +1,2 @@
+import Link from 'next/link';
+export default function Missing(){return <main className="mx-auto max-w-3xl px-6 py-16"><h1 className="text-3xl font-bold">Блюдо не найдено</h1><Link href="/menu" className="mt-5 inline-block text-green-800">Вернуться в меню</Link></main>}

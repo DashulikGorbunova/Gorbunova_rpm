@@ -1,0 +1,3 @@
+import Link from 'next/link';
+import {formatPrice,type MenuItem} from '@/lib/api';
+export function DishCard({item}:{item:MenuItem}){return <article data-dish-card className="flex flex-col rounded-2xl border border-stone-200 bg-white p-6 shadow-sm"><p className="text-xs font-semibold uppercase tracking-wider text-green-700">{item.category_name||'Меню'}</p><h2 className="mt-3 text-xl font-bold">{item.name}</h2><p className="my-4 text-lg font-bold text-green-800">{formatPrice(item.price)}</p><Link href={'/menu/'+item.id} className="mt-auto rounded-lg bg-stone-100 px-4 py-2 text-center font-medium hover:bg-orange-100">Подробнее</Link></article>}

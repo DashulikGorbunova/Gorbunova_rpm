@@ -1,0 +1,2 @@
+import Link from 'next/link';
+export default function Home(){return <main className="mx-auto max-w-5xl px-6 py-16"><section className="rounded-3xl bg-green-900 p-10 text-white"><p className="mb-4 text-orange-200">СТУДЕНЧЕСКАЯ СТОЛОВАЯ</p><h1 className="text-5xl font-bold">Вкусный день начинается здесь.</h1><p className="my-6 text-green-100">Выбирайте любимые блюда из актуального меню.</p><Link className="inline-block rounded-xl bg-orange-200 px-6 py-3 font-bold text-green-950" href="/menu">Посмотреть меню</Link></section></main>}

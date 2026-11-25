@@ -7,5 +7,6 @@
 - [Лабораторная №5 — Celery и фоновые задачи](lab-05/README.md).
 - [Практическая №6 — delivery как gRPC-микросервис](lab-06/README.md).
 - [Практическая №7 — RabbitMQ, Saga, DLQ и Transactional Outbox](lab07/README.md).
+- [Практическая №8 — SSR-витрина Next.js](lab08/README.md).
 
 Работы запускаются из своих каталогов и используют отдельные учебные контейнеры PostgreSQL.
